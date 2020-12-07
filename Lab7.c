@@ -66,7 +66,6 @@ else{
 MPI_Send(&NOT_LOAD, 1, MPI_INT, number_of_tractor, t, MPI_COMM_WORLD);
 }
 }
- 
 if(status==5){
 amount_tractors--;
 printf("Amount tractors %d\n", amount_tractors);
@@ -74,6 +73,7 @@ printf("Amount tractors %d\n", amount_tractors);
 } 
 printf("Program finished\n");
 }
+
 void Tractor()
 {
 int state;
@@ -126,12 +126,7 @@ else{
 state=ACCIDENT;
 printf("Damaged\n");
 Go(number_process,state);
-return;
-}
-}
-}
-}
-}
+return;}}}}}
 int main(int argc, char *argv[])
 {
 MPI_Init(&argc, &argv);
